@@ -58,7 +58,9 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav a {
@@ -66,7 +68,7 @@
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: color 0.3s;
         }
 
@@ -76,7 +78,7 @@
 
         /* Seção Principal / Hero */
         #hero {
-            height: 70vh;
+            height: 75vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -91,6 +93,7 @@
             border-radius: 10px;
             border: 2px solid var(--cor-primaria);
             max-width: 800px;
+            margin: 0 20px;
         }
 
         #hero h2 {
@@ -177,7 +180,7 @@
             margin-bottom: 15px;
         }
 
-        /* Cultura e História (NOVA SEÇÃO) */
+        /* Cultura e História */
         .cultura-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -194,10 +197,16 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.4);
         }
 
-        .bloco-historia.dreads {
+        .bloco-historia.invertido {
             border-left: none;
             border-right: 8px solid var(--cor-secundaria);
             text-align: right;
+        }
+
+        .bloco-historia.destaque {
+            border-left: none;
+            border-bottom: 8px solid var(--cor-destaque);
+            text-align: center;
         }
 
         .bloco-historia h3 {
@@ -211,14 +220,29 @@
             color: var(--cor-primaria);
         }
 
-        .bloco-historia.dreads h3 span {
+        .bloco-historia.invertido h3 span {
             color: var(--cor-secundaria);
+        }
+
+        .bloco-historia.destaque h3 span {
+            color: #4cd137;
         }
 
         .bloco-historia p {
             font-size: 1.1rem;
             margin-bottom: 15px;
             text-align: justify;
+        }
+
+        .bloco-historia.destaque p {
+            text-align: center;
+        }
+
+        /* O Salão */
+        #o-salao {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
         /* Tabela de Preços */
@@ -317,7 +341,7 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .bloco-historia.dreads {
+            .bloco-historia.invertido {
                 text-align: left;
                 border-right: none;
                 border-left: 8px solid var(--cor-secundaria);
@@ -336,6 +360,7 @@
             <ul>
                 <li><a href="#sobre">Quem Somos</a></li>
                 <li><a href="#cultura">Nossa História</a></li>
+                <li><a href="#o-salao">O Espaço</a></li>
                 <li><a href="#servicos">Tabela de Preços</a></li>
                 <li><a href="#contato">Agendar</a></li>
             </ul>
@@ -345,7 +370,7 @@
     <section id="hero">
         <div class="hero-content">
             <h2>A sua coroa merece<br>o melhor cuidado.</h2>
-            <p>A régua máxima, os dreads de respeito e as melhores tranças. Estética, cultura e técnica.</p>
+            <p>A régua máxima, os dreads de respeito e as melhores tranças. Estética, atitude e técnica.</p>
             <a href="#servicos" class="btn">Ver Nossos Preços</a>
         </div>
     </section>
@@ -364,23 +389,47 @@
         </div>
     </section>
 
-    <!-- NOVA SEÇÃO: CULTURA E HISTÓRIA -->
+    <!-- SEÇÃO: CULTURA E HISTÓRIA -->
     <section id="cultura">
         <h2 class="titulo-secao">A História na Cabeça</h2>
         <div class="cultura-container">
             
             <div class="bloco-historia">
                 <h3>A Origem das <span>Tranças</span></h3>
-                <p>Muito antes de serem uma tendência de moda, as tranças já eram um pilar da cultura africana. Registros históricos mostram que penteados trançados (como a nagô) existem há mais de 5.000 anos, originários de povos da Namíbia e do Oeste Africano.</p>
-                <p>Elas carregam uma história profunda de comunicação e resistência. Historicamente, o formato e o desenho das tranças podiam indicar a tribo de uma pessoa, seu estado civil, riqueza ou religião. Durante o período sombrio da escravidão, as tranças rentes ao couro cabeludo foram usadas por mulheres negras como <strong>mapas para rotas de fuga</strong> e para esconder sementes que garantiriam o sustento em novos territórios.</p>
-                <p>Quando a Even trança o seu cabelo, ela está conectando você a essa herança ancestral de força, beleza, identidade e sobrevivência.</p>
+                <p>Muito antes de serem uma tendência de moda, as tranças já eram um pilar da cultura africana. Registros históricos mostram que penteados trançados existem há milhares de anos, originários de diversos povos do continente.</p>
+                <p>Elas carregam uma história profunda de comunicação e resistência. O formato e o desenho podiam indicar a tribo, o estado civil ou a religião de uma pessoa. Durante o período da escravidão, as tranças nagô rentes ao couro cabeludo foram usadas como <strong>mapas para rotas de fuga</strong> e para esconder sementes. Quando a Even trança o seu cabelo, ela conecta você a essa herança ancestral de força e sobrevivência.</p>
             </div>
 
-            <div class="bloco-historia dreads">
+            <div class="bloco-historia invertido">
                 <h3>O Poder dos <span>Dreads</span></h3>
-                <p>Os dreadlocks (ou simplesmente dreads) são um dos estilos de cabelo mais antigos da humanidade. Há registros do seu uso no Antigo Egito, entre os guerreiros Maasai na África Oriental e em textos sagrados da Índia antiga.</p>
-                <p>No entanto, o formato moderno ganhou força política e visibilidade mundial no século XX através da cultura Rastafári na Jamaica. Mais do que estética, manter o cabelo em sua forma natural e "travada" tornou-se um símbolo de <strong>resistência contra a opressão, orgulho negro e conexão espiritual profunda</strong>.</p>
-                <p>Fazer e cultivar dreads exige paciência e respeito ao tempo natural do cabelo. Quando o João trabalha nos seus dreads, o foco não é apenas o estilo urbano ou a "régua", mas fortalecer a coroa que representa a sua identidade mais pura.</p>
+                <p>Os dreadlocks (ou dreads) são um dos estilos mais antigos da humanidade, com registros no Antigo Egito e em tribos guerreiras na África Oriental.</p>
+                <p>O formato ganhou força mundial no século XX com a cultura Rastafári na Jamaica. Mais do que estética, manter o cabelo em sua forma natural e "travada" tornou-se um símbolo de <strong>resistência contra a opressão e de orgulho negro</strong>. Fazer dreads exige paciência e respeito ao tempo natural do cabelo. Aqui, o foco do João não é só mandar a estética, mas fortalecer a coroa que representa a sua identidade mais pura.</p>
+            </div>
+
+            <div class="bloco-historia destaque">
+                <h3>A Coroa e a <span>Autoestima</span></h3>
+                <p>Por muito tempo, padrões eurocêntricos tentaram ditar o que era considerado "belo" ou "apresentável". Assumir o cabelo natural, seja no black power, nas tranças bem desenhadas ou nos dreads de respeito, é um <strong>ato de amor próprio e de quebra de padrões</strong>.</p>
+                <p>No Raízes Afro Studio, nós tratamos o seu cabelo como a sua coroa. Nosso objetivo não é "domar" os seus fios, mas exaltar a textura, a atitude e a força que eles carregam.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: O SALÃO COMO ESPAÇO -->
+    <section id="o-salao">
+        <h2 class="titulo-secao">Mais Que Um Salão</h2>
+        <div class="cultura-container">
+            
+            <div class="bloco-historia">
+                <h3>O Nosso <span>Quilombo Urbano</span></h3>
+                <p>Historicamente, a barbearia e o salão afro na comunidade são muito mais do que locais para cuidar da estética; eles são os nossos verdadeiros pontos de encontro. É o espaço onde a gente troca ideia, escuta um som pesado, fala sobre a vida, sobre o corre e sobre o futuro.</p>
+                <p>O Raízes Afro Studio foi pensado para ser exatamente isso: um ambiente seguro, acolhedor e com a nossa cara. Aqui, você não é só mais um cliente na cadeira. Nós entendemos a sua vivência, valorizamos o seu tempo e respeitamos a sua essência.</p>
+            </div>
+
+            <div class="bloco-historia invertido">
+                <h3>A Régua e a <span>Estética das Ruas</span></h3>
+                <p>A rua sempre ditou a moda, e o corte de cabelo é o cartão de visita de quem tem atitude. A "régua máxima" não é só um detalhe técnico de barbearia, é uma parte fundamental da cultura urbana e do nosso estilo de vida.</p>
+                <p>Seja no pique mandrake, na forte influência do trap, do funk ou no visual agressivo do drill de rua, o seu cabelo comunica quem você é. Da trança desenhada ao corte com química ou no pezinho perfeitamente alinhado, a gente domina essa linguagem visual para entregar exatamente a autenticidade que te representa no corre do dia a dia.</p>
             </div>
 
         </div>
@@ -467,7 +516,7 @@
 
         // Configuração do botão do WhatsApp
         document.getElementById('btn-agendar').addEventListener('click', function() {
-            // Coloque o número do WhatsApp de vocês aqui. Ex: 5511999999999
+            // Lembre-se de colocar o número real do WhatsApp aqui. Ex: 5511999999999
             const numeroWhatsApp = "5511999999999"; 
             const mensagem = "Salve! Vi o site e gostaria de agendar um horário com vocês no Raízes Afro Studio.";
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
