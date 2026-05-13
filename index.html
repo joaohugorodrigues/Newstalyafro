@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raízes Afro Studio | Cortes, Tranças e Dreads</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* --- ESTILOS CSS --- */
+        /* --- ESTILOS CSS COM CORES VIBRANTES --- */
+        :root {
+            --cor-fundo: #120e0a;
+            --cor-texto: #fce8d5;
+            --cor-primaria: #f2a900;
+            --cor-secundaria: #c93b22;
+            --cor-destaque: #255938;
+            --cor-card: #1f1812;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -15,109 +24,201 @@
         }
 
         body {
-            background-color: #121212;
-            color: #f5f5f5;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
             line-height: 1.6;
         }
 
-        /* Header */
+        /* Cabeçalho / Header */
         header {
-            background-color: #0a0a0a;
+            background-color: #000;
             padding: 20px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #d4af37;
+            border-bottom: 4px solid var(--cor-primaria);
+            box-shadow: 0 4px 15px rgba(242, 169, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         header h1 {
             color: #fff;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
         }
 
         header span {
-            color: #d4af37; /* Dourado */
+            color: var(--cor-primaria);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #d4af37;
+            color: var(--cor-secundaria);
         }
 
-        /* Hero Section */
+        /* Seção Principal / Hero */
         #hero {
-            height: 60vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80') center/cover;
+            background: linear-gradient(rgba(18, 14, 10, 0.85), rgba(201, 59, 34, 0.4)), url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&q=80') center/cover;
+            border-bottom: 5px solid var(--cor-secundaria);
+        }
+
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            border: 2px solid var(--cor-primaria);
+            max-width: 800px;
         }
 
         #hero h2 {
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            color: var(--cor-primaria);
+            font-weight: 900;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            font-weight: bold;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background-color: #d4af37;
-            color: #121212;
+            padding: 15px 30px;
+            background-color: var(--cor-primaria);
+            color: #000;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 900;
+            font-size: 1.1rem;
+            text-transform: uppercase;
             border: none;
             border-radius: 5px;
-            margin-top: 20px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(242, 169, 0, 0.4);
         }
 
         .btn:hover {
-            background-color: #b5952f;
+            background-color: var(--cor-secundaria);
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(201, 59, 34, 0.6);
         }
 
         /* Seções Gerais */
         section {
-            padding: 60px 20px;
+            padding: 80px 20px;
+        }
+
+        h2.titulo-secao {
             text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--cor-primaria);
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 1px;
         }
 
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 40px;
-            color: #d4af37;
-        }
-
-        /* Sobre */
+        /* Quem Somos */
         .sobre-container {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .card-profissional {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 10px;
-            width: 300px;
-            border-top: 4px solid #d4af37;
+            background-color: var(--cor-card);
+            padding: 40px 30px;
+            border-radius: 15px;
+            width: 350px;
+            text-align: center;
+            border-top: 6px solid var(--cor-secundaria);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s;
+        }
+
+        .card-profissional:hover {
+            transform: translateY(-10px);
+            border-top: 6px solid var(--cor-primaria);
         }
 
         .card-profissional h3 {
+            font-size: 1.8rem;
+            color: var(--cor-primaria);
             margin-bottom: 15px;
+        }
+
+        /* Cultura e História (NOVA SEÇÃO) */
+        .cultura-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .bloco-historia {
+            background-color: var(--cor-card);
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 8px solid var(--cor-primaria);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .bloco-historia.dreads {
+            border-left: none;
+            border-right: 8px solid var(--cor-secundaria);
+            text-align: right;
+        }
+
+        .bloco-historia h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .bloco-historia h3 span {
+            color: var(--cor-primaria);
+        }
+
+        .bloco-historia.dreads h3 span {
+            color: var(--cor-secundaria);
+        }
+
+        .bloco-historia p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: justify;
         }
 
         /* Tabela de Preços */
@@ -125,48 +226,101 @@
             max-width: 800px;
             margin: 0 auto;
             overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         .tabela-precos {
             width: 100%;
             border-collapse: collapse;
-            background-color: #1e1e1e;
-            border-radius: 10px;
-            overflow: hidden;
+            background-color: var(--cor-card);
+            text-align: left;
         }
 
         .tabela-precos th, .tabela-precos td {
-            padding: 15px;
-            border-bottom: 1px solid #333;
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .tabela-precos th {
-            background-color: #d4af37;
-            color: #121212;
+            background-color: var(--cor-secundaria);
+            color: #fff;
             text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .tabela-precos tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.2);
         }
 
         .tabela-precos tr:hover {
-            background-color: #2a2a2a;
+            background-color: rgba(242, 169, 0, 0.1);
+            color: var(--cor-primaria);
+            font-weight: bold;
+        }
+
+        .preco-destaque {
+            color: var(--cor-primaria);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Contato */
+        #contato {
+            text-align: center;
+            background-color: var(--cor-card);
+            border-top: 4px solid var(--cor-destaque);
+            border-bottom: 4px solid var(--cor-destaque);
+            padding: 60px 20px;
+        }
+
+        #contato p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        #btn-agendar {
+            background-color: #25D366; 
+            color: #fff;
+        }
+
+        #btn-agendar:hover {
+            background-color: #1ebe57;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.5);
         }
 
         /* Footer */
         footer {
-            background-color: #0a0a0a;
+            background-color: #000;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
             font-size: 0.9rem;
-            border-top: 1px solid #333;
+            color: #888;
         }
 
-        /* Responsividade Básica */
+        footer strong {
+            color: var(--cor-primaria);
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 gap: 15px;
+                padding: 20px;
             }
             #hero h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            .sobre-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .bloco-historia.dreads {
+                text-align: left;
+                border-right: none;
+                border-left: 8px solid var(--cor-secundaria);
             }
         }
     </style>
@@ -180,37 +334,60 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#cultura">Nossa História</a></li>
+                <li><a href="#servicos">Tabela de Preços</a></li>
+                <li><a href="#contato">Agendar</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="hero">
         <div class="hero-content">
-            <h2>A sua coroa merece o melhor cuidado.</h2>
-            <p>Especialistas em cortes, tranças e dreads.</p>
-            <a href="#servicos" class="btn">Ver Tabela de Preços</a>
+            <h2>A sua coroa merece<br>o melhor cuidado.</h2>
+            <p>A régua máxima, os dreads de respeito e as melhores tranças. Estética, cultura e técnica.</p>
+            <a href="#servicos" class="btn">Ver Nossos Preços</a>
         </div>
     </section>
 
     <section id="sobre">
-        <h2>Quem Somos</h2>
+        <h2 class="titulo-secao">Quem Somos</h2>
         <div class="sobre-container">
             <div class="card-profissional">
                 <h3>João Hugo</h3>
-                <p>Especialista em Dreads e Cortes Masculinos. Trazendo o melhor do estilo e da régua máxima para o seu visual, seja no corte clássico, com química ou na manutenção dos seus dreads.</p>
+                <p>Especialista em <strong>Dreads e Cortes Masculinos</strong>. Focado em trazer a régua perfeita pro seu visual, seja num corte na tesoura, com química ou no talento e manutenção dos seus dreads.</p>
             </div>
             <div class="card-profissional">
                 <h3>Even Frida</h3>
-                <p>Especialista em Tranças. Trabalhando com afeto e técnica para entregar tranças nagô, box braids e diversos estilos que exaltam a beleza e protegem o seu cabelo.</p>
+                <p>Especialista em <strong>Tranças</strong>. Trabalhando com técnica, paciência e proteção para entregar as melhores tranças nagô e estilos autênticos que exaltam a sua coroa.</p>
             </div>
         </div>
     </section>
 
+    <!-- NOVA SEÇÃO: CULTURA E HISTÓRIA -->
+    <section id="cultura">
+        <h2 class="titulo-secao">A História na Cabeça</h2>
+        <div class="cultura-container">
+            
+            <div class="bloco-historia">
+                <h3>A Origem das <span>Tranças</span></h3>
+                <p>Muito antes de serem uma tendência de moda, as tranças já eram um pilar da cultura africana. Registros históricos mostram que penteados trançados (como a nagô) existem há mais de 5.000 anos, originários de povos da Namíbia e do Oeste Africano.</p>
+                <p>Elas carregam uma história profunda de comunicação e resistência. Historicamente, o formato e o desenho das tranças podiam indicar a tribo de uma pessoa, seu estado civil, riqueza ou religião. Durante o período sombrio da escravidão, as tranças rentes ao couro cabeludo foram usadas por mulheres negras como <strong>mapas para rotas de fuga</strong> e para esconder sementes que garantiriam o sustento em novos territórios.</p>
+                <p>Quando a Even trança o seu cabelo, ela está conectando você a essa herança ancestral de força, beleza, identidade e sobrevivência.</p>
+            </div>
+
+            <div class="bloco-historia dreads">
+                <h3>O Poder dos <span>Dreads</span></h3>
+                <p>Os dreadlocks (ou simplesmente dreads) são um dos estilos de cabelo mais antigos da humanidade. Há registros do seu uso no Antigo Egito, entre os guerreiros Maasai na África Oriental e em textos sagrados da Índia antiga.</p>
+                <p>No entanto, o formato moderno ganhou força política e visibilidade mundial no século XX através da cultura Rastafári na Jamaica. Mais do que estética, manter o cabelo em sua forma natural e "travada" tornou-se um símbolo de <strong>resistência contra a opressão, orgulho negro e conexão espiritual profunda</strong>.</p>
+                <p>Fazer e cultivar dreads exige paciência e respeito ao tempo natural do cabelo. Quando o João trabalha nos seus dreads, o foco não é apenas o estilo urbano ou a "régua", mas fortalecer a coroa que representa a sua identidade mais pura.</p>
+            </div>
+
+        </div>
+    </section>
+
     <section id="servicos">
-        <h2>Catálogo de Preços</h2>
+        <h2 class="titulo-secao">Catálogo de Serviços</h2>
         <div class="tabela-container">
             <table class="tabela-precos">
                 <thead>
@@ -224,37 +401,37 @@
                     <tr>
                         <td>Cabelo e Barba</td>
                         <td>João Hugo</td>
-                        <td>R$ 50,00</td>
+                        <td class="preco-destaque">R$ 50,00</td>
                     </tr>
                     <tr>
                         <td>Corte (Cabelo)</td>
                         <td>João Hugo</td>
-                        <td>R$ 40,00</td>
+                        <td class="preco-destaque">R$ 40,00</td>
                     </tr>
                     <tr>
                         <td>Corte com Química</td>
                         <td>João Hugo</td>
-                        <td>R$ 60,00</td>
+                        <td class="preco-destaque">R$ 60,00</td>
                     </tr>
                     <tr>
                         <td>Barba</td>
                         <td>João Hugo</td>
-                        <td>R$ 25,00</td>
+                        <td class="preco-destaque">R$ 25,00</td>
                     </tr>
                     <tr>
                         <td>Pezinho</td>
                         <td>João Hugo</td>
-                        <td>R$ 25,00</td>
+                        <td class="preco-destaque">R$ 25,00</td>
                     </tr>
                     <tr>
                         <td>Dreads Curtos</td>
                         <td>João Hugo</td>
-                        <td>A partir de R$ 180,00</td>
+                        <td class="preco-destaque">A partir de R$ 180,00</td>
                     </tr>
                     <tr>
                         <td>Tranças Nagô Simples</td>
                         <td>Even Frida</td>
-                        <td>A partir de R$ 80,00</td>
+                        <td class="preco-destaque">A partir de R$ 80,00</td>
                     </tr>
                 </tbody>
             </table>
@@ -262,17 +439,17 @@
     </section>
 
     <section id="contato">
-        <h2>Agende seu Horário</h2>
-        <p>Pronto para renovar o visual? Clique no botão abaixo para falar conosco no WhatsApp.</p>
-        <button id="btn-agendar" class="btn">Agendar Agora</button>
+        <h2 class="titulo-secao">Pronto para o Pique?</h2>
+        <p>Clique no botão abaixo e fale direto com a gente no WhatsApp para marcar seu horário.</p>
+        <button id="btn-agendar" class="btn">Chamar no WhatsApp</button>
     </section>
 
     <footer>
         <p>&copy; 2026 Raízes Afro Studio. Todos os direitos reservados.</p>
-        <p>Desenvolvido por João Hugo.</p>
+        <p>Desenvolvido por <strong>João Hugo</strong>.</p>
     </footer>
 
-    <!-- --- INTERATIVIDADE JAVASCRIPT --- -->
+    <!-- --- JAVASCRIPT --- -->
     <script>
         // Rolagem suave para os links do menu
         document.querySelectorAll('nav a').forEach(anchor => {
@@ -282,17 +459,17 @@
                 const targetSection = document.getElementById(targetId);
                 
                 window.scrollTo({
-                    top: targetSection.offsetTop - 70, // Ajuste para o tamanho do header
+                    top: targetSection.offsetTop - 85, // Compensa o tamanho do cabeçalho
                     behavior: 'smooth'
                 });
             });
         });
 
-        // Ação do botão de agendar (Redirecionamento para WhatsApp)
+        // Configuração do botão do WhatsApp
         document.getElementById('btn-agendar').addEventListener('click', function() {
-            // Lembre-se de substituir "5511999999999" pelo número de WhatsApp real do salão
+            // Coloque o número do WhatsApp de vocês aqui. Ex: 5511999999999
             const numeroWhatsApp = "5511999999999"; 
-            const mensagem = "Olá! Gostaria de agendar um horário no Raízes Afro Studio.";
+            const mensagem = "Salve! Vi o site e gostaria de agendar um horário com vocês no Raízes Afro Studio.";
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
             
             window.open(url, '_blank');
